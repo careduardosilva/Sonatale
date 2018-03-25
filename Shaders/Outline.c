@@ -15,7 +15,7 @@ void main()
     float origin_Alpha = abs(texture2D(gm_BaseTexture, v_vTexcoord).a); 
     float alpha = origin_Alpha;
     vec4 origin_Color = vec4(0.025,0.025,0.025,0);
-    //Obtém o pixel na maior/menor distância e soma ao alpha
+    //Obtém o pixel na maior distância e soma ao alpha
     alpha += max(alpha,texture2D(gm_BaseTexture, v_vTexcoord + offset_x).a);
     alpha += max(alpha,texture2D(gm_BaseTexture, v_vTexcoord - offset_x).a);
     alpha += max(alpha,texture2D(gm_BaseTexture, v_vTexcoord + offset_y).a);
