@@ -7,9 +7,9 @@ uniform float pixel_Larg;
 void main()
 {
     vec2 offset_x;
-    offsetx.x = pixel_Larg;
+    offset_x.x = pixel_Larg;
     vec2 offset_y;
-    offsety.y = pixel_Alt;
+    offset_y.y = pixel_Alt;
     /*Obtém só valores positivos para o origin_alpha de cada pixel, impedindo assim que ele chegue em valores negativos
     O alpha obterá os valores positivos do origin_alpha, portanto, não conseguirá ficar invisível, já que está em módulo*/
     float origin_Alpha = abs(texture2D(gm_BaseTexture, v_vTexcoord).a); 
